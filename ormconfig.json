@@ -1,0 +1,28 @@
+[
+  {
+    "name": "prod",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "",
+    "database": "alike-dev",
+    "synchronize": true,
+    "logging": false,
+    "entities": ["src/entity/**/*.ts"],
+    "migrations": ["src/migration/**/*.ts"],
+    "subscribers": ["src/subscriber/**/*.ts"],
+    "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+    }
+  },
+  {
+    "name": "default",
+    "type": "sqlite",
+    "database": "./db.sqlite3",
+    "entities": ["src/entity/**/*.ts"],
+    "synchronize": true
+  }
+]
